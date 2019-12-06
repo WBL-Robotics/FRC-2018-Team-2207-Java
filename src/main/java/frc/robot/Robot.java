@@ -12,15 +12,16 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import frc.robot.subsystems.ArmElbow;
-import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.*;
 public class Robot extends TimedRobot {
+
   public static Drivetrain m_Drivetrain = new Drivetrain();
   public static ArmElbow m_ArmElbow = new ArmElbow();
   public static XboxController controller = new XboxController(RobotMap.ControllerPort);
+  public static ArmShoulder m_ArmShoulder = new ArmShoulder();
+
   private Scheduler scheduler = Scheduler.getInstance();
   @Override  public void robotInit() {
-    m_ArmElbow = new ArmElbow();
   }
   @Override
   public void autonomousInit() {

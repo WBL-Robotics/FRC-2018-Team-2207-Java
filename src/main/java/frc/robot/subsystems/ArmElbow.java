@@ -11,6 +11,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.MoveArm;
 
 /**
  * Add your docs here.
@@ -22,7 +23,7 @@ public class ArmElbow extends Subsystem {
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand());
+     setDefaultCommand(new MoveArm());
   }
   /**
    * This is a method to move up the Arm's elbow.

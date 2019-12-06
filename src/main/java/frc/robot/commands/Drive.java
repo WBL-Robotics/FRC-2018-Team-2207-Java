@@ -25,7 +25,7 @@ public class Drive extends Command {
   protected void execute() {
     double forwardValue = controller.getTriggerAxis(Hand.kRight);
     double backwardValue = controller.getTriggerAxis(Hand.kLeft);
-    Robot.m_Drivetrain.drive(forwardValue-backwardValue, controller.getY(Hand.kLeft));
+    Robot.m_Drivetrain.drive(forwardValue-backwardValue, controller.getX(Hand.kLeft));
     System.out.println(1.0);
   }
   // Make this return true when this Command no longer needs to run execute()
